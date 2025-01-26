@@ -4,8 +4,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Second Page</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            font-size: 2rem;
+            color: #333;
+        }
+
+        .image-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .image-container a img {
+            max-width: 200px;
+            height: auto;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            transition: transform 0.2s ease;
+        }
+
+        .image-container a img:hover {
+            transform: scale(1.05);
+        }
+    </style>
 </head>
 <body>
-    <h1>Hello saaaaar</h1>
+    <h1>Hello saar</h1>
+    <div class="image-container">
+        <a href="https://raydium.io/swap/?outputCurrency=63LfDmNb3MQ8mw9MtZ2To9bEA2M71kZUUGq5tiJxcqj9&inputMint=sol&outputMint=BcQEm5sEdAGqHnR9DCaMUSbmNTKdyJhq3upci7Uzpump" target="_blank">
+            <img src="images/raydium.jpg" alt="Image 1">
+        </a>
+        <a href="https://www.dextools.io/app/en/token/pajeettoken?t=1737922338091" target="_blank">
+            <img src="images/dextools.jpg" alt="Image 2">
+        </a>
+    </div>
 </body>
 </html>
