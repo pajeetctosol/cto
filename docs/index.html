@@ -1,1 +1,76 @@
-docs/
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            background-color: #333;
+            padding: 10px;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .content {
+            padding: 20px;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#" onclick="showPage('tab1')">Tab 1</a>
+        <a href="#" onclick="showPage('tab2')">Tab 2</a>
+        <a href="#" onclick="showPage('tab3')">Tab 3</a>
+    </nav>
+
+    <div id="tab1" class="content active">
+        <h1>Hello Saar</h1>
+    </div>
+
+    <div id="tab2" class="content hidden">
+        <h1>Hello Saar</h1>
+    </div>
+
+    <div id="tab3" class="content hidden">
+        <h1>Hello Saar</h1>
+    </div>
+
+    <script>
+        function showPage(pageId) {
+            const pages = document.querySelectorAll('.content');
+            pages.forEach(page => {
+                page.classList.add('hidden');
+                page.classList.remove('active');
+            });
+
+            const activePage = document.getElementById(pageId);
+            activePage.classList.remove('hidden');
+            activePage.classList.add('active');
+        }
+    </script>
+</body>
+</html>
